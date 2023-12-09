@@ -3,6 +3,10 @@
   import Sidebar from "./lib/Sidebar.svelte";
   import data from './data/data.json';
   const {staff} = data;
+
+  const inputHandler = (e) => {
+    console.log(e.target);
+  }
 </script>
 
 
@@ -19,7 +23,7 @@
   <div class="game">
     <div class="container">
       <div class="row">
-        <Sidebar />
+        <Sidebar inputHandler={inputHandler} />
         <ImageGrid staff={staff} />
       </div>
     </div><!-- row -->
