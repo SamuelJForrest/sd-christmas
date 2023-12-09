@@ -1,7 +1,10 @@
 <script>
 	import ImageGrid from "./lib/ImageGrid.svelte";
   import Sidebar from "./lib/Sidebar.svelte";
+  import data from './data/data.json';
+  const {staff} = data;
 </script>
+
 
 <header>
   <div class="container">
@@ -17,7 +20,7 @@
     <div class="container">
       <div class="row">
         <Sidebar />
-        <ImageGrid />
+        <ImageGrid staff={staff} />
       </div>
     </div><!-- row -->
   </div><!-- container -->
